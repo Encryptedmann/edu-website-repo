@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+        div:nth-child(1){
+            background-image: url(home\ section-bg.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        div:nth-child(2){
+            background: maroon;
+        }
+        div:nth-child(3){
+            height: 400px;
+            background-image: url(home\ section-bg-2.jpg);
+            background-attachment: fixed;
+        }
+        div:nth-child(4){
+            background: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div id="paralax">
+        <h2>div-1</h2>
+    </div>
+    <div>
+        <h2>div-2</h2>
+        
+    </div>
+    <div id="paralax2">
+        <h2>div-3</h2>
+        
+    </div>
+    <div>
+        <h2>div-4</h2>
+    </div>
+
+
+    <script>
+        
+        const paralax = document.getElementById('paralax');
+        window.addEventListener("scroll",function(){
+            let offset = window.pageYOffset;
+            paralax.style.backgroundPositionY = offset * 0.2 + "px"
+        });
+        const paralax2 = document.getElementById('paralax2');
+        window.addEventListener("scroll",function(){
+            let offset2 = window.pageYOffset;
+            paralax.style.backgroundPositionY = offset2 * 0.2 + "px"
+        });
+    </script>
+</body>
+</html>
